@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-// import './App.css';
+import './components/carousel';
 import { Layout } from 'antd';
 import 'antd/dist/antd.css'
 const { Content, Footer, Sider, Header } = Layout;
@@ -12,7 +12,9 @@ function App() {
         <Sider>Sider</Sider>
         <Layout>
           <Header>Header</Header>
-          <Content>Content</Content>
+          <Content>Content
+
+          </Content>
           <Footer>Footer</Footer>
         </Layout>
       </Layout>
