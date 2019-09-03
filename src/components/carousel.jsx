@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'antd';
+import 'antd/dist/antd.css'
 
-
-class Carousel extends React.Component {
+class theCarousel extends React.Component {
   constructor(props) {
   }
 
@@ -13,7 +13,15 @@ class Carousel extends React.Component {
 
   render() {
     return (
-    <Carousel autoplay>
+    <Carousel autoplay style={{
+      textAlign: 'center',
+      height: '160px',
+      lineHeight: '160px',
+      background: '#364d79',
+      overflow: 'hidden',
+      // minHeight: 300,
+      // width: 300
+      }}>
         <div>
           <h3>1</h3>
         </div>
@@ -33,4 +41,4 @@ class Carousel extends React.Component {
 
 
 
-export default Carousel;
+export default theCarousel;
