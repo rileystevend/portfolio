@@ -12,8 +12,8 @@ function App() {
         <Sider>Sider</Sider>
         <Layout>
           <Header>Header</Header>
-          <Content style={{ margin: '0 16px' }}>
-            <div style={{minHeight: 360, padding: 24}}>
+          <Content style={{/*{ margin: '0 16px' }*/}}>
+            <div style={{minHeight: 360}}>
               <TheCarousel />
             </div>
           </Content>
