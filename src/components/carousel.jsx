@@ -6,8 +6,7 @@ function TheCarousel () {
   return (
   <Carousel autoplay style={{
     textAlign: 'center',
-    height: '160px',
-    lineHeight: '160px',
+    lineHeight: '600px',
     background: '#364d79',
     overflow: 'hidden',
     // minHeight: 300,
@@ -21,9 +20,6 @@ function TheCarousel () {
       </div>
       <div>
         <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
       </div>
     </Carousel>
   );
