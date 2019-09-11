@@ -17,7 +17,11 @@ function App() {
               <TheCarousel />
             </div>
           </Content>
-          <Footer>Footer</Footer>
+          <Footer>Made By Steven
+          
+          {/* <div style={{ color: textPrimary }}>Made by <a href="https://github.com/flexdinesh" target="_blank" rel="noopener noreferrer" style={{ color: colorPrimary }}>Dinesh</a> <span role="img" aria-label="heart">❤️</span></div> */}
+          
+          </Footer>
         </Layout>
       </Layout>
   </div>
