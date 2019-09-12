@@ -6,7 +6,7 @@ function TheCarousel () {
   return (
   <Carousel autoplay style={{
     textAlign: 'center',
-    lineHeight: '600px',
+    lineHeight: '720px', //this needs to be changed to a percentage
     background: '#364d79',
     overflow: 'hidden',
     // minHeight: 300,

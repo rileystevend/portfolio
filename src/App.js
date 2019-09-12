@@ -11,13 +11,13 @@ function App() {
       <Layout style={{ minHeight: '100vh' }}>
         <Sider>Sider</Sider>
         <Layout>
-          <Header>Header</Header>
-          <Content style={{/*{ margin: '0 16px' }*/}}>
+          {/* <Header>Header</Header> */}
+          <Content style={{/*{ margin: '0 16px' }*/ height: '90%'}}>
             <div style={{minHeight: 360}}>
               <TheCarousel />
             </div>
           </Content>
-          <Footer>Made By Steven
+          <Footer style={{ marginLeft: '40%', height: '50px'}}>Made By Steven
           
           {/* <div style={{ color: textPrimary }}>Made by <a href="https://github.com/flexdinesh" target="_blank" rel="noopener noreferrer" style={{ color: colorPrimary }}>Dinesh</a> <span role="img" aria-label="heart">❤️</span></div> */}
           
