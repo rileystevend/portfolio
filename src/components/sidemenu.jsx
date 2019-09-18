@@ -1,9 +1,13 @@
 import React from 'react';
-
+//import menu from antd?
 import 'antd/dist/antd.css'
 
 function SideMenu () {
-  return ('hello')
+  return (
+     <div>
+{/* add antd menu here? */}
+     </div> 
+  );
   
   
 
