@@ -13,6 +13,34 @@ class App extends React.Component {
       key: '1',
     };
   }
+
+  // onSelect(info) {
+  //   if (info.key === '6') {
+  //     this.props.actions.logout();
+  //   } else {
+  //     this.setState({ key: info.key });
+  //   }
+  // }
+
+  view() {
+    const { key } = this.state;
+    if (key === '1') {
+      return (<TheCarousel />);
+    }
+    // if (key === '2') {
+    //   return (<SearchVenues />);
+    // }
+    // if (key === '3') {
+    //   return (<Requests />);
+    // }
+    // if (key === '4') {
+    //   return (<EPKView artist={artist} />);
+    // }
+    // if (key === '5') {
+    //   return (<EPKEdit artistID={artist} />);
+    // }
+  }
+
   
 
 
@@ -27,7 +55,8 @@ class App extends React.Component {
             {/* <Header>Header</Header> */}
             <Content style={{/*{ margin: '0 16px' }*/ height: '90%'}}>
               <div style={{minHeight: 360}}>
-                <TheCarousel />
+                {/* <TheCarousel /> */}
+                {this.view()}
               </div>
             </Content>
             <Footer style={{ marginLeft: '40%', height: '50px'}}>Made By Steven
