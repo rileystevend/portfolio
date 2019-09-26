@@ -13,6 +13,38 @@ class App extends React.Component {
       key: '1',
     };
   }
+
+  // onSelect(info) {
+  //   if (info.key === '6') {
+  //     this.props.actions.logout();
+  //   } else {
+  //     this.setState({ key: info.key });
+  //   }
+  // }
+
+  // view() {
+  //   const { key } = this.state;
+  //   const artist = this.props.store.artistId;
+  //   const artist2 = parseInt(artist.toString()); /* eslint-disable-line */
+  //   const { bookings } = this.props.store;
+  //   const filteredBookings = bookings.length > 0 ? bookings.filter(booking => booking.denied !== 1) : [];
+  //   if (key === '1') {
+  //     return calendar(filteredBookings, true, artist2, null, this.props.actions.addBooking);
+  //   }
+  //   if (key === '2') {
+  //     return (<SearchVenues />);
+  //   }
+  //   if (key === '3') {
+  //     return (<Requests />);
+  //   }
+  //   if (key === '4') {
+  //     return (<EPKView artist={artist} />);
+  //   }
+  //   if (key === '5') {
+  //     return (<EPKEdit artistID={artist} />);
+  //   }
+  // }
+
   
 
 
