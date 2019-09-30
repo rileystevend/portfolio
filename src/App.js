@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import TheCarousel from './components/carousel.jsx';
+import Cards from './components/cards.jsx';
 import SideMenu from './components/sidemenu.jsx';
 import { Layout } from 'antd';
 import 'antd/dist/antd.css'
@@ -28,7 +29,7 @@ class App extends React.Component {
       return (<TheCarousel />);
     }
     // if (key === '2') {
-    //   return (<SearchVenues />);
+    //   return (<Cards />);
     // }
     // if (key === '3') {
     //   return (<Requests />);
