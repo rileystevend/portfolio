@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      key: '1',
+      key: '2',
     };
   }
 
@@ -28,9 +28,9 @@ class App extends React.Component {
     if (key === '1') {
       return (<TheCarousel />);
     }
-    // if (key === '2') {
-    //   return (<Cards />);
-    // }
+    if (key === '2') {
+      return (<Cards />);
+    }
     // if (key === '3') {
     //   return (<Requests />);
     // }
