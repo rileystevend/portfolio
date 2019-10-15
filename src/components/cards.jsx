@@ -6,6 +6,7 @@ const { Meta } = Card;
 
 function Cards () {
   return (
+<div>
     <Card
     style={{ width: 300 }}
     cover={
@@ -66,6 +67,7 @@ function Cards () {
       description="This is the description"
     />
   </Card>
+  </div>
   );
 
 }
