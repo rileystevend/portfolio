@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import TheCarousel from './components/carousel.jsx';
 import Cards from './components/cards.jsx';
 import SideMenu from './components/sidemenu.jsx';
-import { Layout } from 'antd';
+import { Layout, Button } from 'antd';
 import 'antd/dist/antd.css'
 const { Content, Footer, Sider, Header } = Layout;
 
@@ -50,7 +50,11 @@ class App extends React.Component {
     <div>
         <Layout style={{ minHeight: '100vh' }}>
           <Sider width="25%">Sider
-            <SideMenu></SideMenu>
+            <SideMenu>
+              <Button onClick={()=>this.setState({key: 1})}>
+
+              </Button>
+            </SideMenu>
           </Sider>
           <Layout>
             {/* <Header>Header</Header> */}
