@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import TheCarousel from './components/carousel.jsx';
 import Cards from './components/cards.jsx';
 import SideMenu from './components/sidemenu.jsx';
-import { Layout } from 'antd';
+import { Layout, Button } from 'antd';
 import 'antd/dist/antd.css'
 const { Content, Footer, Sider, Header } = Layout;
 
@@ -11,17 +11,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      key: '2',
+      key: '1',
     };
   }
 
-  // onSelect(info) {
-  //   if (info.key === '6') {
-  //     this.props.actions.logout();
-  //   } else {
-  //     this.setState({ key: info.key });
-  //   }
-  // }
+  onSelect(info) {
+    if (info.key === '6') {
+      this.props.actions.logout();
+    } else {
+      this.setState({ key: info });
+    }
+  }
 
   view() {
     const { key } = this.state;
@@ -42,7 +42,9 @@ class App extends React.Component {
     // }
   }
 
-  
+  componentDidMount() {
+    this.view()
+  }
 
 
   render() {
@@ -50,7 +52,10 @@ class App extends React.Component {
     <div>
         <Layout style={{ minHeight: '100vh' }}>
           <Sider width="25%">Sider
-            <SideMenu></SideMenu>
+            <SideMenu>
+            </SideMenu>
+            <Button onClick={()=>{this.onSelect(2)}}>
+            </Button>
           </Sider>
           <Layout>
             {/* <Header>Header</Header> */}
