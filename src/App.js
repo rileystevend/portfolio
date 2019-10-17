@@ -11,17 +11,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      key: '2',
+      key: '1',
     };
   }
 
-  // onSelect(info) {
-  //   if (info.key === '6') {
-  //     this.props.actions.logout();
-  //   } else {
-  //     this.setState({ key: info.key });
-  //   }
-  // }
+  onSelect(info) {
+    if (info.key === '6') {
+      this.props.actions.logout();
+    } else {
+      this.setState({ key: info });
+    }
+  }
 
   view() {
     const { key } = this.state;
@@ -42,7 +42,9 @@ class App extends React.Component {
     // }
   }
 
-  
+  componentDidMount() {
+    this.view()
+  }
 
 
   render() {
@@ -51,10 +53,9 @@ class App extends React.Component {
         <Layout style={{ minHeight: '100vh' }}>
           <Sider width="25%">Sider
             <SideMenu>
-              <Button onClick={()=>this.setState({key: 1})}>
-
-              </Button>
             </SideMenu>
+            <Button onClick={()=>{this.onSelect(2)}}>
+            </Button>
           </Sider>
           <Layout>
             {/* <Header>Header</Header> */}
