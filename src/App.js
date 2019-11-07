@@ -90,7 +90,7 @@ class App extends React.Component {
             <div style={{
                 padding: 24,
                 background: '#fff',
-                minHeight: 360,
+                minHeight: '100%',
               }}/* eslint-disable-line */>
               {this.view()}
             </div>
