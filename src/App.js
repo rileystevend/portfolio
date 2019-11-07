@@ -3,23 +3,31 @@ import logo from './logo.svg';
 import TheCarousel from './components/carousel.jsx';
 import Cards from './components/cards.jsx';
 import SideMenu from './components/sidemenu.jsx';
-import { Layout, Button } from 'antd';
+import { Layout, Button, Menu, Icon } from 'antd';
 import 'antd/dist/antd.css'
 const { Content, Footer, Sider, Header } = Layout;
+const {SubMenu} = Menu;
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       key: '1',
+      collapsed: false,
     };
+  }
+
+  onCollapse(collapsed) {
+    console.log(collapsed);
+    this.setState({ collapsed });
   }
 
   onSelect(info) {
     console.log(info)
 
-      this.setState({ key: info });
-    this.view()
+      this.setState({ key: info.key });
+ 
   }
 
   view() {
@@ -42,37 +50,64 @@ class App extends React.Component {
     // }
   }
 
-  componentDidMount() {
-    this.view()
-  }
-
 
   render() {
     return (
-    <div>
-        <Layout style={{ minHeight: '100vh' }}>
-          <Sider collapsible collapsed = {this.state.collapsed} width="25%">Sider
-            <SideMenu>
-            </SideMenu>
-            <Button onClick={()=>{this.onSelect(2)}}>
-            </Button>
-          </Sider>
-          <Layout>
-            {/* <Header>Header</Header> */}
-            <Content style={{/*{ margin: '0 16px' }*/ height: '90%'}}>
-              <div style={{minHeight: 360}}>
-                {/* <TheCarousel /> */}
-                {this.view()}
-              </div>
-            </Content>
-            <Footer style={{ marginLeft: '40%', height: '50px'}}>Made By Steven
-            
-            {/* <div style={{ color: textPrimary }}>Made by <a href="https://github.com/flexdinesh" target="_blank" rel="noopener noreferrer" style={{ color: colorPrimary }}>Dinesh</a> <span role="img" aria-label="heart">❤️</span></div> */}
-            
-            </Footer>
-          </Layout>
+      <Layout style={{ minHeight: '100vh' }}>
+        <Sider>
+          <div className="logo" />
+          <Menu
+            theme="dark"
+            defaultSelectedKeys={['1']}
+            mode="inline"
+            onSelect={info => this.onSelect(info)}
+          >
+            <Menu.Item key="1">
+              <Icon type="calendar" />
+              <span>Home</span>
+            </Menu.Item>
+            <Menu.Item key="2">
+              <Icon type="search" />
+              <span>My Projects</span>
+            </Menu.Item>
+            <Menu.Item key="3">
+              <Icon type="folder" />
+              <span>My Resume</span>
+            </Menu.Item>
+            <SubMenu
+              key="sub1"
+              title={<span>
+                <Icon type="team" />
+                <span>SubMenu</span>
+                </span> /* eslint-disable-line */}>
+              <Menu.Item key="4">View</Menu.Item>
+              <Menu.Item key="5">Edit</Menu.Item>
+            </SubMenu>
+          </Menu>
+        </Sider>
+        <Layout>
+          <Content style={{ margin: '0 16px' }}>
+            <div style={{
+                padding: 24,
+                background: '#fff',
+                minHeight: '100%',
+              }}/* eslint-disable-line */>
+              {this.view()}
+            </div>
+          </Content>
+          <Footer style={{ textAlign: 'center' }}>
+            <img src={logo} style={{ height: 20 }} alt="" />
+            <div style={{
+              fontSize: 14,
+              fontFamily: "'Baumans', cursive",
+              color: 'black',
+              display: 'inline-block',
+              }}
+            >Steven Riley
+            </div>
+          </Footer>
         </Layout>
-    </div>
+      </Layout>
     );
   }
 }
