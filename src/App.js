@@ -12,7 +12,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       key: '1',
+      collapsed: false,
     };
+  }
+
+  onCollapse(collapsed) {
+    console.log(collapsed);
+    this.setState({ collapsed });
   }
 
   onSelect(info) {
@@ -40,10 +46,6 @@ class App extends React.Component {
     // if (key === '5') {
     //   return (<EPKEdit artistID={artist} />);
     // }
-  }
-
-  componentDidMount() {
-    this.view()
   }
 
 
