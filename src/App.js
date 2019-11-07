@@ -16,11 +16,10 @@ class App extends React.Component {
   }
 
   onSelect(info) {
-    if (info.key === '6') {
-      this.props.actions.logout();
-    } else {
+    console.log(info)
+
       this.setState({ key: info });
-    }
+    this.view()
   }
 
   view() {
@@ -31,6 +30,7 @@ class App extends React.Component {
     if (key === '2') {
       return (<Cards />);
     }
+    
     // if (key === '3') {
     //   return (<Requests />);
     // }
@@ -51,7 +51,7 @@ class App extends React.Component {
     return (
     <div>
         <Layout style={{ minHeight: '100vh' }}>
-          <Sider width="25%">Sider
+          <Sider collapsible collapsed = {this.state.collapsed} width="25%">Sider
             <SideMenu>
             </SideMenu>
             <Button onClick={()=>{this.onSelect(2)}}>
