@@ -19,7 +19,7 @@ function Cards () {
             }
             actions={[
               <Icon type="setting" key="setting" />,
-              <Icon type="edit" key="edit" />,
+              // <Icon type="edit" key="edit" />,
               <Icon type="ellipsis" key="ellipsis" />,
             ]}
           >
