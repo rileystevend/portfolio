@@ -3,7 +3,7 @@ import 'antd/dist/antd.css'
 import { Card, Icon, Avatar, Row, Col } from 'antd';
 const { Meta } = Card;
 
-
+// const projects = [] map through projects array with card
 function Cards () {
   return (
     <div height="100%">
@@ -19,7 +19,7 @@ function Cards () {
             }
             actions={[
               <Icon type="setting" key="setting" />,
-              <Icon type="edit" key="edit" />,
+              // <Icon type="edit" key="edit" />,
               <Icon type="ellipsis" key="ellipsis" />,
             ]}
           >
