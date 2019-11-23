@@ -27,8 +27,8 @@ function Cards () {
           >
             <Meta
               // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-              title="Card title"
-              description="This is the description"
+              title="The Beatbook"
+              description="Full-Stack Engineer"
             />
           </Card>
         </Col>
