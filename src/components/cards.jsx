@@ -12,6 +12,7 @@ function Cards () {
       <Row type="flex" justify="space-around" align="middle">
         <Col span={8}>
           <Card
+            hoverable="true"
             style={{ width: 300 }}
             cover={
               <img
@@ -24,6 +25,7 @@ function Cards () {
               // <Icon type="edit" key="edit" />,
               <Icon type="ellipsis" key="ellipsis" />,
             ]}
+            onClick={()=>console.log('hey')}
           >
             <Meta
               // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
