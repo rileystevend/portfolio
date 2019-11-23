@@ -1,9 +1,11 @@
 import React from 'react';
+import beatbooktitle from "../images/beatbooktitle.png";
 import 'antd/dist/antd.css'
 import { Card, Icon, Avatar, Row, Col } from 'antd';
 const { Meta } = Card;
 
 // const projects = [] map through projects array with card
+// use the "loading" version of the card for skeleton. see Ant website -> cards.
 function Cards () {
   return (
     <div height="100%">
@@ -14,7 +16,7 @@ function Cards () {
             cover={
               <img
                 alt="example"
-                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                src={beatbooktitle}
               />
             }
             actions={[
@@ -24,7 +26,7 @@ function Cards () {
             ]}
           >
             <Meta
-              avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+              // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
               title="Card title"
               description="This is the description"
             />
