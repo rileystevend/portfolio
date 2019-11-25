@@ -6,11 +6,14 @@ const { Meta } = Card;
 
 // const projects = [] map through projects array with card
 // use the "loading" version of the card for skeleton. see Ant website -> cards.
-const cardArr = [{img: beatbooktitle, title: "The Beatbook", description: "Full-Stack Engineer"}]
+const cardArr = [{img: beatbooktitle, title: "The Beatbook", description: "Full-Stack Engineer"}, 
+                  {img: beatbooktitle, title: "test 2", description: "test 22"}]
 function Cards () {
   return (
     <div height="100%">
       <Row type="flex" justify="space-around" align="middle">
+      {cardArr.map((cardInfo, i) => {
+        return (
         <Col span={8}>
           <Card
             hoverable="true"
@@ -18,7 +21,7 @@ function Cards () {
             cover={
               <img
                 alt="example"
-                src={beatbooktitle}
+                src={cardInfo.img}
               />
             }
             actions={[
@@ -30,12 +33,15 @@ function Cards () {
           >
             <Meta
               // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-              title="The Beatbook"
-              description="Full-Stack Engineer"
+              title={cardInfo.title}
+              description={cardInfo.description}
             />
           </Card>
         </Col>
-        <Col span={8}>
+        )
+      })
+      }
+        {/* <Col span={8}>
         <Card
             style={{ width: 300 }}
             cover={
@@ -78,7 +84,7 @@ function Cards () {
                 description="This is the description"
               />
             </Card>
-          </Col>
+          </Col> */}
       </Row>
     </div>
   );
