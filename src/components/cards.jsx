@@ -6,6 +6,7 @@ const { Meta } = Card;
 
 // const projects = [] map through projects array with card
 // use the "loading" version of the card for skeleton. see Ant website -> cards.
+const cardArr = [{img: beatbooktitle, title: "The Beatbook", description: "Full-Stack Engineer"}]
 function Cards () {
   return (
     <div height="100%">
