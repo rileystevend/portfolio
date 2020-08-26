@@ -14,9 +14,11 @@ function TheCarousel () {
     }}>
       <div>
         <h3>1</h3>
+        {/* pic of me? */}
       </div>
       <div>
         <h3>2</h3>
+        {/* highlight CSE app */}
       </div>
       <div>
         <h3>3</h3>
